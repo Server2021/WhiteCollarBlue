@@ -1,0 +1,30 @@
+@import "../../styles/style.scss";
+
+.subtitle-with-line {
+  @extend .flex-horizontal-center;
+}
+
+.subtitle-with-line--no-margin {
+  margin-bottom: unset;
+}
+
+.subtitle-with-line--title {
+  flex-grow: 0;
+  color: $color-main-dark;
+  font-weight: 700;
+  margin-right: 0.5em;
+  font-size:18px;
+}
+
+.subtitle-with-line--divider {
+  flex-grow: 1;
+  height: 2px;
+  background-color: $color-lightGrey;
+}
+
+.tooltip {
+  svg {
+    vertical-align: bottom;
+    margin-left: 10px;
+  }
+}

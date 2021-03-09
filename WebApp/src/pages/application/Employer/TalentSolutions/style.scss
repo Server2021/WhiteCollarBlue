@@ -1,0 +1,55 @@
+@import "../../../../styles/style.scss";
+
+.talent__description {
+    text-align: center;
+    margin: 20px auto 40px auto;
+    max-width: 700px;
+}
+
+.talent__card {
+    border-left: 3px solid $color-main;
+
+    margin: 10px auto;
+    padding: 24px 30px;
+    @extend .BigShadow;
+    @extend .HoverTransition;
+
+    .talent__card__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        h4 {
+            font-weight: 400;
+            margin-bottom: 0;
+            color: $color-main-dark;
+        }
+
+        svg {
+            color: $color-main;
+        }
+    }
+
+    .talent__card__content {
+        white-space: pre-wrap;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 30px;
+
+        li::before {
+            content: '✓';
+            color: $color-main;
+            margin-right: 10px;
+        }
+    }
+
+
+
+    @media #{$break-sm} {
+        max-width: 700px;
+        margin: 20px auto;
+    }
+
+}

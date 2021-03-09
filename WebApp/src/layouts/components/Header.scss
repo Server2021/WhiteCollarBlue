@@ -1,0 +1,226 @@
+@import "../../styles/style.scss";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: white;
+  color: $color-darkGrey;
+}
+
+// 01. Header mobile view start
+
+header.header--mobile-view {
+  .header--mobile-view__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+
+    @extend .BigShadow;
+
+    .header--mobile-view__bottom__logo {
+      width: 180px;
+      height: auto;
+    }
+  }
+
+  @media #{$break-md} {
+    display: none;
+  }
+
+  .burger-icon {
+    color: $color-main;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+  }
+}
+
+// 02. Header desktop view start
+
+header.header--desktop-view {
+  @extend .BigShadow;
+  display: none;
+
+  @media #{$break-md} {
+    display: block;
+    height: 170px;
+    padding: 16px 0;
+  }
+
+  .header--desktop-view__content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .header--desktop-view__left {
+    width: 17%;
+  }
+
+  .header--desktop-view__logo {
+    width: 100%;
+  }
+
+  .header--desktop-view__right {
+    height: 138px;
+    position: relative;
+  }
+
+  .header--desktop-view__second-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    height: 50%;
+
+    .second-nav__timesheet {
+      font-size: 16px;
+      color: $color-darkGrey;
+      margin-right: 16px;
+
+      span,
+      svg {
+        vertical-align: middle;
+      }
+
+      svg {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .header--desktop-view__primary-nav {
+    display: flex;
+    align-items: flex-end;
+    height: 50%;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      a {
+        padding: 0px 10px;
+        &:last-child {
+          padding-right: 0;
+        }
+        @media #{$break-lg} {
+          padding: 0px 12px;
+        }
+        height: 30px;
+
+        &:focus,
+        &:active {
+          li {
+            border-bottom: 2px solid $color-accent;
+          }
+        }
+
+        li {
+          color: $color-darkGrey;
+          font-size: 14px;
+          cursor: pointer;
+          padding: 5px 0px;
+          @media #{$break-lg} {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.show-on-smaller {
+  display: none;
+}
+
+// resize Header on scroll - only in Desktop
+
+@media #{$break-md} {
+  .smaller header {
+    // transform: translateY(-1);
+    // transition: 0.3s ease-out;
+    height: 70px;
+    padding: 12px 0;
+
+    .header--desktop-view__left {
+      width: 5%;
+    }
+
+    .header--desktop-view__logo {
+      display: none;
+    }
+
+    .show-on-smaller {
+      display: block !important;
+    }
+
+    .header--desktop-view__right {
+      height: unset;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+
+      .header--desktop-view__second-nav {
+        display: flex;
+        flex-direction: row;
+        order: 1;
+        margin-left: 20px;
+
+        .second-nav__timesheet {
+          display: none;
+        }
+      }
+
+      .header--desktop-view__primary-nav {
+        display: unset;
+      }
+    }
+
+    .header--desktop-view__bottom__logo {
+      width: 40px;
+    }
+  }
+}
+
+// semantic-ui dropdown override
+
+.ui.dropdown .menu {
+  border: none;
+  top: 140%;
+  @extend .SmallShadow;
+
+  &.login-dropdown {
+    top: 160%;
+    left: -20px;
+  }
+
+  &.login-dropdown > .item {
+    font-size: 14px;
+  }
+}
+
+.ui.dropdown .menu > .item {
+  color: $color-main-dark;
+  background: $color-main-light;
+  font-size: 16px;
+
+  &:hover {
+    background: $color-main-dark;
+    color: white;
+  }
+
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}

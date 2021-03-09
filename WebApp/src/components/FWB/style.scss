@@ -1,0 +1,295 @@
+@import "../../styles/style.scss";
+
+// Friends with Benefits Section on Pages
+.fwb__content {
+    margin: 0 auto;
+    position: relative;
+
+    @extend .flex-vertical-center;
+
+    @media #{$break-md} {
+        padding-top: 50px;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-top: 100px;
+    }
+
+    .fwb__image {
+        width: 100%;
+        height: 200px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @extend .BigShadow;
+
+            object-fit: cover;
+
+            @media #{$break-md} {
+                border-radius: 4px;
+            }
+        }
+
+        @media #{$break-md} {
+            width: 500px;
+            height: 400px;
+            top: -100px;
+            right: -129px;
+            position: relative;
+        }
+        @media #{$break-lg} {
+            top: -70px;
+        }
+
+        .fwb__circle-container {
+            position: absolute;
+            top: 117px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media #{$break-md} {
+                top: 50%;
+                right: -83px;
+                left: unset;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .fwb__body {
+        border-top: 6px solid $color-main;
+        background-color: $color-main-light;
+        padding: 100px 16px 30px 16px;
+        text-align: center;
+        width: 100%;
+
+        @media #{$break-md} {
+            padding: 50px 50px 50px 260px;
+            text-align: left;
+        }
+
+        @media #{$break-lg} {
+            width: 58%;
+        }
+
+        .fwb__title {
+            h1 { text-align: left !important }
+        }
+
+        h1.fwb__subtitle {
+            font-size: 28px;
+            color: $color-main-dark;
+            font-weight: bold;
+            font-style: italic;
+            margin-top: 20px;
+
+            span {
+                color: $color-main;
+                display: block;
+
+                @media #{$break-md} {
+                    display: inline-block;
+                }
+            }
+        }
+
+        div.fwb__text {
+            border-top: 2px solid $color-lightGrey;
+            padding: 16px;
+
+            p {
+                font-size: 16px;
+                color: $color-black;
+                line-height: 22px;
+                margin-bottom: 10px;
+
+                span {
+                    color: $color-main;
+                }
+            }
+
+            @media #{$break-md} {
+                max-width: 450px;
+                border-top: 0;
+                border-left: 2px solid $color-lightGrey;
+                padding: 0 16px;
+                margin: 16px 0;
+            }
+        }
+
+        .fwb__button {
+            button {
+                height: auto;
+                width: 100%;
+                white-space: pre-wrap;
+                @media #{$break-md} {
+                    width: unset;
+                }
+            }
+        }
+    }
+
+}
+
+
+.fwb-circle {
+    width: 166px;
+    height: 166px;
+    background-image: linear-gradient(45deg, #093b70 2%, #0d56a4 102%, #700909 100%);
+    border-radius: 50%;
+    @extend .BigShadow;
+    @extend .flex-center;
+
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    z-index: 0;
+
+    div {
+        @extend .flex-vertical-center;
+        div {
+            font-size: 45px;
+            line-height: 45px;
+            padding: 6px;
+            border-top:1px solid $color-accent;
+            border-bottom:1px solid $color-accent;
+            margin: 6px 0;
+        }
+    }
+}
+
+// Friends with Benefits Modal
+
+.fwb-modal {
+    border-radius: 4px !important;
+    max-width: unset !important;
+}
+.fwb__content.fwb-modal__body {
+    position: unset;
+    max-width: 900px;
+    @media #{$break-md} {
+        padding-top: 0;
+        align-items: unset;
+    }
+    .fwb__image {
+        position: unset;
+        img {
+            box-shadow: none;
+            border-radius: 4px 4px 0 0;
+            @media #{$break-md} {
+                width: 300px;
+                height: 100%;
+                border-radius: 4px 0 0 4px;
+            }
+        }
+        @media #{$break-md} {
+            width: unset;
+            height: unset;
+            top: 0;
+            right: 0;
+            position: relative;
+        }
+        @media #{$break-lg} {
+            top: 0;
+        }
+        .fwb__circle-container {
+            @media #{$break-md} {
+                top: 27%;
+            }
+        }
+    }
+    .fwb__body {
+        border-top: 6px solid $color-main;
+        background-color: $color-main-light;
+        padding: 100px 16px 30px 16px;
+        text-align: center;
+        width: 100%;
+        border-radius: 0 0 4px 4px;
+        @media #{$break-md} {
+            border-top: 0;
+            border-left: 6px solid $color-main;
+            padding: 50px 50px 50px 110px;
+            text-align: left;
+            position: unset;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+}
+
+// material design modal override
+.fwb-modal__dialog {
+    .MuiDialog-paperWidthSm {
+        max-width: unset !important;
+    }
+    .MuiDialog-paper {
+        overflow-y: auto !important; 
+        margin: 20px !important; 
+        padding: 0px !important;
+        @media #{$break-sm} {
+            overflow-y: unset !important; 
+        }
+    }
+}
+
+
+// Friends with Benefits Page
+
+.fwb-page__body {
+    width: 100%;
+}
+.fwb__content.fwb-page__body {
+    @media #{$break-md} {
+        padding-top: 0;
+        align-items: unset;
+    }
+    .fwb__image {
+        position: unset;
+        img {
+            box-shadow: none;
+            border-radius: 4px 4px 0 0;
+            @media #{$break-md} {
+                width: 300px !important;
+                height: 100%;
+                border-radius: 4px 0 0 4px;
+            }
+        }
+        @media #{$break-md} {
+            width: unset;
+            height: unset;
+            top: 0;
+            right: 0;
+            position: relative;
+        }
+        @media #{$break-lg} {
+            top: 0;
+        }
+        .fwb__circle-container {
+            @media #{$break-md} {
+                top: 27%;
+            }
+        }
+    }
+    .fwb__body {
+        border-top: 6px solid $color-main;
+        background-color: white;
+        padding: 100px 16px 30px 16px;
+        text-align: center;
+        width: 100%;
+        border-radius: 0 0 4px 4px;
+        @media #{$break-md} {
+            border-top: 0;
+            border-left: 6px solid $color-main;
+            padding: 50px 50px 50px 110px;
+            text-align: left;
+            position: unset;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+    .fwb__button {
+        display: none;
+    }
+}

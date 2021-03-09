@@ -1,0 +1,21 @@
+@import "../../../../styles/style.scss";
+
+
+.table {
+    @extend .admin-table;
+
+    tr {
+        th {
+            border-top: 1px solid rgba(34, 36, 38, .1);
+            width: 160px;
+            background: $color-main-light !important;
+            color: $color-main-dark !important; 
+            font-weight: 700 !important;
+        }
+
+        &:first-child {
+            th { border-top: none; }
+        }
+    }
+
+}

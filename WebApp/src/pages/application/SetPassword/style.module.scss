@@ -1,0 +1,20 @@
+@import "../../../styles/style.scss";
+
+.setPassword {
+    .setPassword_description {
+        text-align: left;
+        width: 98%;
+        color: $color-main-dark;
+    }
+    form {
+        @extend .flex-vertical-center;
+
+    max-width: 500px;
+    margin: 0 auto;
+        text-align: center;
+    }
+    .actions {
+        margin-top: 20px;
+        button:first-child { margin-right: 10px; }
+    }
+}

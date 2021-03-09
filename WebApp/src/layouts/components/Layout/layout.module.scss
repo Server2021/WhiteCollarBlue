@@ -1,0 +1,105 @@
+@import "../../../styles/style.scss";
+
+.layout {
+  height: 100%;
+
+  .hidden {
+    @media #{$break-md} {
+      display: none;
+    }
+
+    position: relative;
+
+    .mobileLogin {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      opacity: 0.8;
+    }
+  }
+}
+
+/* This is override styling of react-burger-menu plugin */
+
+/* Position and sizing of clickable cross button */
+:global .bm-cross-button {
+  height: 24px;
+  width: 24px;
+  right: 12px !important;
+  top: 12px !important;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+:global .bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+:global .bm-menu {
+  background: $color-main-dark;
+  padding: 3em 0;
+  font-size: $font-size-p1;
+
+  a.active {
+    li { background: rgba(255, 255, 255, 0.1); color:$color-accent };
+  }
+}
+
+/* Wrapper for item list */
+:global .bm-item-list {
+  li {
+    -webkit-transform: translateZ(0) scale(1, 1);
+    transform: translateZ(0) scale(1, 1);
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    span {
+      -webkit-transform: translateZ(0) scale(1, 1);
+      transform: translateZ(0) scale(1, 1);
+      -webkit-transition: all 0.1s linear;
+      transition: all 0.1s linear;
+      font-weight: bold;
+      color: white;
+      padding: 10px 0;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}
+
+:global .submenus {
+  padding-left: 20px;
+  margin-top: 6px;
+
+  li {
+    font-size: $font-size-p2;
+    text-transform: capitalize;
+    font-weight: regular;
+
+  }
+}
+
+/* Individual item */
+:global .bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+:global .bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  background: red;
+}

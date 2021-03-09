@@ -1,0 +1,9 @@
+@import "../../styles/style.scss";
+
+.contact__subtitle {
+  padding: 0px 0px 20px;
+
+  @media #{$break-md} {
+    padding: 0 0 30px 0;
+  }
+}

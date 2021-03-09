@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63 63">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1755a6;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        filter: url(#Ellipse_294);
+      }
+    </style>
+    <filter id="Ellipse_294" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1060" data-name="Group 1060" transform="translate(-385 -1402.938)">
+    <g class="cls-3" transform="matrix(1, 0, 0, 1, 385, 1402.94)">
+      <circle id="Ellipse_294-2" data-name="Ellipse 294" class="cls-1" cx="22.5" cy="22.5" r="22.5" transform="translate(9 6)"/>
+    </g>
+    <g id="flaticon1538517600-svg" transform="translate(403 1418.518)">
+      <g id="Group_1043" data-name="Group 1043" transform="translate(0 3)">
+        <path id="Path_543" data-name="Path 543" class="cls-2" d="M23.26,6.323V3H0V21.276A3.254,3.254,0,0,0,3.323,24.6H24.091s2.492-.052,2.492-3.323V6.323ZM3.323,22.937a1.627,1.627,0,0,1-1.661-1.661V4.661H21.6V21.276a2.4,2.4,0,0,0,.562,1.661Z" transform="translate(0 -3)"/>
+        <rect id="Rectangle_1506" data-name="Rectangle 1506" class="cls-2" width="16.614" height="1.661" transform="translate(3.323 4.984)"/>
+        <rect id="Rectangle_1507" data-name="Rectangle 1507" class="cls-2" width="5.815" height="1.661" transform="translate(12.461 14.953)"/>
+        <rect id="Rectangle_1508" data-name="Rectangle 1508" class="cls-2" width="7.476" height="1.661" transform="translate(12.461 11.63)"/>
+        <rect id="Rectangle_1509" data-name="Rectangle 1509" class="cls-2" width="7.476" height="1.661" transform="translate(12.461 8.307)"/>
+        <rect id="Rectangle_1510" data-name="Rectangle 1510" class="cls-2" width="7.476" height="8.307" transform="translate(3.323 8.307)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+@import "../../../../styles/style.scss";
+
+.dialogStyle {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.dialogTitle {
+    padding: 40px 50px 0px 50px;
+    color: $color-main-dark;
+}
+
+.dialogContent {
+
+    margin-top: 30px;
+    
+    div:first-child {
+        margin-bottom: 16px;
+    }
+
+    @media #{$break-md} {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+
+        div:first-child {
+            margin-bottom:unset;
+            margin-right: 16px;
+        }
+
+    }
+}
+
+.dialogContentText {
+    font-size: 18px !important;
+    color: $color-black !important;
+    padding-top: 0px !important;
+}
+
+.dialogActions {
+    margin: 0 auto;
+}

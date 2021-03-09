@@ -1,0 +1,44 @@
+@import "../../styles/style.scss";
+
+
+.styled-title {
+    @extend .flex-vertical-center;
+
+    h1 {
+        color: $color-titleGrey;
+        font-size: 25px;
+        text-align: center;
+
+        @media #{$break-sm} {
+            font-size: 30px;
+        }
+    }
+}
+
+.yellow-line {
+    width: 60px;
+    height: 5px;
+
+    line {
+        stroke: #FCBA51;
+        stroke-width: 5;
+    }
+}
+
+.styled-title--left {
+    @media #{$break-md} {
+        align-items: flex-start;
+    }
+}
+
+.styled-title--light {
+    h1 {
+        color: white;
+    }
+}
+
+.styled-title--small {
+    h1 {
+        font-size: 25px;
+    }
+}

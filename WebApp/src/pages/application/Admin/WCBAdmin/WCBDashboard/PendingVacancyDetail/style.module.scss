@@ -1,0 +1,24 @@
+@import "../../../../../../styles/style.scss";
+
+.jobSumitterDetail {
+    margin-top: 30px;
+    h6 { 
+        color: $color-main-dark; 
+        font-size: 16px; 
+        margin-bottom: 4px;
+    }
+    .jobSumitterDetail_box {
+        border-top: 1px solid $color-lightGrey;
+        border-bottom: 1px solid $color-lightGrey;
+        padding: 16px 0;
+        div {
+            margin-bottom: 16px;
+            b {
+                margin-bottom: 6px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

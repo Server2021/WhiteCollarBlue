@@ -1,0 +1,36 @@
+@import "../../../styles/style.scss";
+
+.floating-sns {
+    display: none;
+    // it covers side menu on small desktop, so to fix this, used special breakpoint
+    // it won't show below 1400px, instead, it appears on footer
+    @media screen and (min-width: 1400px) {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 3vw;
+        z-index: 999;
+        top: 29vh;
+    }
+    @media #{$break-xl} {
+        left: 5vw;
+    }
+
+    .floating-sns__circle {
+        @extend .flex-center;
+        background: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        @extend .BigShadow;
+        margin-bottom: 14px;
+        @media #{$break-lg} {
+            
+        }
+        .floating-sns__icon {
+            color: $color-main;
+            font-size: 26px;
+        }
+    }
+}
+

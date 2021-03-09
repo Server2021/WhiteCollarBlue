@@ -1,0 +1,24 @@
+@import "../../../../../styles/style.scss";
+
+.title {
+    h6 {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $color-grey;
+    }
+    h3 {
+        color: $color-main;
+    }
+}
+
+.submit {
+    button { 
+        width: 100%; 
+        @media #{$break-md} {
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+}

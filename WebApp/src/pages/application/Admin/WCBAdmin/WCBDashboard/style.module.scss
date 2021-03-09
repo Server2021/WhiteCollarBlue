@@ -1,0 +1,26 @@
+@import "../../../../../styles/style.scss";
+
+.container {
+    margin-bottom: 20px;
+    
+    @media #{$break-md} {
+        margin-top: 50px;
+    }
+    
+    display: grid;
+    @media #{$break-md} {
+        grid-template-columns: 72% 26%;
+        grid-gap: 2%;
+    }
+    button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .actions {
+        margin-top: 20px;
+        @media #{$break-md} {
+            margin-top: 0;
+        }
+    }
+
+}

@@ -1,0 +1,90 @@
+@import "../../../styles/style.scss";
+
+.contact__map {
+  // map assets for temporary development purpose
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.contact__map {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.contact__map iframe,
+.contact__map object,
+.contact__map embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.contact__logo {
+  display: none;
+
+  @media #{$break-md} {
+    display: block;
+    width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.contact__contents {
+  @media #{$break-md} {
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  h3 {
+    color: $color-main-dark;
+    margin: 0;
+    margin-bottom: 10px;
+
+    span {
+      color: $color-main;
+    }
+  }
+
+  .contact__contact-info {
+    padding: 30px 0px;
+
+    p {
+      margin-bottom: 0.5em;
+    }
+
+    @media #{$break-md} {
+      padding: 0px;
+      margin-right: 16px;
+      width: 100%;
+    }
+    @media #{$break-lg} {
+      padding: 0px 16px;
+    }
+  }
+}
+
+.contact__form-container {
+  padding: 20px 0px;
+  width: 100%;
+
+  .contact__form {
+    margin-top: 20px;
+    button {
+      margin: 10px auto 0 auto;
+      @extend .flex-center;
+      @media #{$break-md} {
+        float: right;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../styles/style.scss";
+
+.container {
+  padding: 20vh 16px 10vh 16px;
+  @extend .flex-vertical-center;
+
+  @media #{$break-md} {
+    padding: 40vh 16px 20vh 16px;
+  }
+
+  color: $color-main;
+
+  img {
+    width: 120px;
+    margin-bottom: 30px;
+  }
+
+  div {
+    text-align: center;
+
+    h1 {
+      font-size: 68px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}

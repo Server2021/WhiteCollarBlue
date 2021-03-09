@@ -1,0 +1,46 @@
+@import "../../styles/style.scss";
+
+// in material design.. maybe don't nest
+.login-modal {
+  position: relative;
+}
+
+.login-title {
+  @extend .flex-vertical-center;
+  padding: 32px 24px 8px;
+  span {
+    font-size: 24px;
+    line-height: 30px;
+    color: $color-main-dark;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.modal-action {
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+  span {
+    font-weight: bold !important;
+  }
+  .modal-action__top {
+    flex-direction: row;
+    margin-bottom: 6px;
+    button {
+      width: 100% !important;
+      &:first-child {
+        margin-bottom: 8px;
+        @media #{$break-md} {
+          margin-bottom: unset;
+        }
+      }
+      @media #{$break-md} {
+        margin: 0 3px;
+        width: unset !important;
+      }
+    }
+  }
+}

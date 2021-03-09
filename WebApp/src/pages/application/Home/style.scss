@@ -1,0 +1,536 @@
+@import "../../../styles/style.scss";
+
+// 01. hero start
+.home__hero {
+  height: 300px;
+  background-image: url("../../../assets/home/home-hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  @extend .flex-center;
+
+  @media #{$break-md} {
+    height: 500px;
+  }
+}
+
+.home__title {
+  color: white;
+  font-size: 32px;
+  line-height: 40px;
+  @extend .flex-column;
+  width: 90%;
+  text-align: center;
+
+  &:hover {
+    color: white;
+  }
+
+  span {
+    vertical-align: middle;
+  }
+
+  span:first-child {
+    @media #{$break-md} {
+      margin-right: 8px;
+    }
+  }
+
+  // need to fix later
+  margin-top: 80px;
+
+  @media #{$break-md} {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.home__search-bar {
+  height: 100%;
+  background-color: $color-main-dark;
+
+  @media #{$break-md} {
+    height: 150px;
+    padding: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home__search-bar__container {
+    @media #{$break-md} {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    @media #{$break-md} {
+      padding-bottom: 0px;
+
+      margin-bottom: unset;
+      border-bottom: none;
+    }
+  }
+
+  .home__search-bar__tagline {
+    color: white;
+    text-align: center;
+    padding: 16px;
+    span {
+      font-weight: 400;
+    }
+    @media #{$break-md} {
+      margin-right: 30px;
+    }
+  }
+
+  .home__search-bar__cv__button {
+    width: 100%;
+    height: 56px;
+    font-size: 18px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    @media #{$break-lg} {
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+    img {
+      margin-right: 10px;
+    }
+
+    svg {
+      margin-left: 10px;
+    }
+  }
+
+  .home__search-bar__cv {
+    padding: 20px;
+    border-bottom: 1px solid rgba(247, 249, 250, 0.5);
+
+    @media #{$break-md} {
+      padding: 0px;
+      margin-top: 20px;
+      border-bottom: none;
+    }
+    @media #{$break-lg} {
+      margin: 20px 0 0 20px;
+    }
+    @media #{$break-xl} {
+      margin-right: 20px;
+    }
+  }
+
+  .home__search-bar__line {
+    @media #{$break-md} {
+      border-left: 1px solid rgba(247, 249, 250, 0.5);
+      height: 55px;
+      margin: 20px 20px 0 20px;
+    }
+  }
+
+  .home__search-bar__filter {
+    padding: 20px;
+    width: 100%;
+    @media #{$break-md} {
+      padding: 0;
+    }
+    @media #{$break-xl} {
+      margin: 0 20px;
+    }
+    .jobsearch__top__button {
+      height: 55px;
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+      min-width: 170px;
+      @media #{$break-lg} {
+        width: 190px;
+      }
+
+      span {
+        font-size: 18px;
+      }
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// 01. hero end
+
+// 02. Job Seekers / Employer CTA start
+section.home__jobseekers-and-employers {
+  overflow: hidden;
+
+  @media #{$break-md} {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .home__jobseekers,
+  .home__employers {
+    height: 250px;
+    width: 100%;
+
+    @media #{$break-md} {
+      height: 400px;
+    }
+
+    background-color: white;
+    @extend .flex-center;
+
+    overflow: hidden;
+    position: relative;
+
+    &:hover .home__jobseekers__bg,
+    &:hover .home__employers__bg {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      filter: none;
+      -webkit-filter: grayscale(0.2);
+    }
+  }
+
+  .home__jobseekers__bg,
+  .home__employers__bg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top right;
+
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+    filter: gray;
+    /* IE5+ */
+    -webkit-filter: grayscale(1);
+    /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+    opacity: 0.5;
+  }
+
+  .home__cta__content {
+    position: absolute;
+
+    h1 {
+      width: 248px;
+      /* Looking for */
+      font-family: inherit;
+      font-size: 28px;
+      color: $color-main-dark;
+      text-transform: uppercase;
+      text-align: center;
+
+      @media #{$break-md} {
+        font-size: 36px;
+      }
+    }
+
+    .home__cta__button {
+      @extend .custom-button;
+      width: 250px;
+      font-size: 24px;
+      // svg {
+      //     margin-left: 10px;
+      // }
+      // &:hover {
+      //     svg {
+      //         @extend .HoverTransition;
+      //         transform:translateX(4px);
+      //     }
+      // }
+      @extend .btn-arrow-animation;
+    }
+  }
+
+  .home__jobseekers__content {
+    @extend .home__cta__content;
+
+    @media #{$break-md} {
+      right: 56px;
+      text-align: right;
+    }
+
+    h1 {
+      @media #{$break-md} {
+        text-align: right;
+      }
+    }
+  }
+
+  .home__employers__content {
+    @extend .home__cta__content;
+
+    @media #{$break-md} {
+      left: 56px;
+    }
+
+    h1 {
+      @media #{$break-md} {
+        text-align: left;
+      }
+    }
+  }
+}
+
+// 02. Job Seekers / Employer CTA end
+
+// 03. Latest Jobs start
+.home__latest-jobs {
+  @extend .flex-center;
+  padding: 50px 20px;
+
+  @media #{$break-md} {
+    padding: 50px;
+  }
+
+  .home__latest-jobs__title {
+    margin-bottom: 55px;
+  }
+
+  .home__latest-jobs__body {
+    margin-top: 25px;
+    position: relative;
+
+    @media #{$break-md} {
+      margin-top: 55px;
+    }
+  }
+
+  .home__latest-jobs__view-all {
+    font-size: 20px;
+    color: $color-main-dark;
+    font-weight: bold;
+    @extend .flex-horizontal-center;
+
+    margin-top: 30px;
+
+    svg {
+      color: $color-main;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    @media #{$break-md} {
+      position: absolute;
+      top: -30px;
+      right: 10px;
+      margin-top: 0px;
+    }
+  }
+
+  .home__latest-jobs__view-all.only-show-desktop {
+    display: none;
+
+    @media #{$break-md} {
+      display: flex;
+    }
+  }
+}
+
+// Job Card
+.job-card {
+  width: 100%;
+  padding: 16px;
+  border-top: 6px solid #0d56a4;
+  background-color: #f7f9fa;
+  @extend .BigShadow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+
+  position: relative;
+
+  width: calc(100vw - 40px);
+
+  @media #{$break-md} {
+    width: 220px !important;
+    height: 210px;
+    display: flex !important;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 16px 30px 40px 30px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #4f4f4f;
+    font-weight: 700;
+    margin-bottom: 0;
+
+    position: absolute;
+    right: 16px;
+    top: 16px;
+
+    @media #{$break-md} {
+      font-size: 20px;
+      text-align: center;
+      position: unset;
+    }
+  }
+
+  .job-card__image {
+    height: 80px;
+    @extend .flex-center;
+
+    @media #{$break-md} {
+      height: 100px;
+    }
+  }
+
+  a button {
+    height: 40px;
+    padding: 6px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: $color-main;
+    font-family: inherit;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 900;
+    text-align: center;
+    @extend .BigShadow;
+
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+
+    @media #{$break-md} {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.slick-slider--job {
+  display: none;
+  @media #{$break-md} {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+  }
+  @media #{$break-lg} {
+    max-width: 960px;
+  }
+  .slick-list {
+    padding: 10px 0px 30px 0px;
+    margin: 0 auto;
+  }
+}
+
+// 03. Latest Jobs start end
+
+// 04. Latest Articles start
+.home__latest-articles {
+  @extend .flex-center;
+  padding: 50px 20px;
+  background: $color-main-light;
+
+  .home__latest-articles__content {
+    display: grid;
+    grid-gap: 1em;
+
+    @media #{$break-md} {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+
+  .home__latest-articles__text {
+    p {
+      margin-top: 16px;
+      text-align: center;
+
+      @media #{$break-md} {
+        text-align: left;
+      }
+    }
+  }
+
+  @mixin home__latest-articles__view-all {
+    font-size: 20px;
+    color: $color-main-dark;
+    font-weight: bold;
+    @extend .flex-column;
+
+    span:first-child {
+      margin-bottom: 5px;
+    }
+
+    span:last-child {
+      color: $color-main;
+      @extend .flex-horizontal-center;
+
+      svg {
+        margin-left: 6px;
+      }
+    }
+
+    @media #{$break-md} {
+      align-items: flex-start;
+    }
+  }
+
+  .home__latest-articles__view-all {
+    @include home__latest-articles__view-all();
+  }
+
+  .home__latest-articles__view-all--mobile {
+    @extend .home__latest-articles__view-all;
+
+    margin-top: 20px;
+
+    @media #{$break-md} {
+      display: none;
+    }
+  }
+
+  .home__latest-articles__view-all--desktop {
+    @extend .home__latest-articles__view-all;
+    display: none;
+
+    @media #{$break-md} {
+      display: flex;
+    }
+  }
+
+  .home__latest-articles__cards {
+    display: grid;
+    grid-gap: 12px;
+
+    @media #{$break-md} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// 04. Latest Articles end
+
+// 06. What Our Clients Say
+.home__testimonial {
+  background-image: url("../../../assets/home/testimonial-bg.png");
+  background-size: cover;
+  background-position: center;
+  // @extend .flex-center;
+  padding: 50px 0;
+  @media #{$break-md} {
+    padding: 70px 0 10px 0;
+  }
+
+  .home__testimonial--content {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}

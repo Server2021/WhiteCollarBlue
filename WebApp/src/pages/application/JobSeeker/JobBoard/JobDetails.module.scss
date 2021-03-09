@@ -1,0 +1,82 @@
+@import "../../../../styles/style";
+
+.wrapper {
+  padding: 16px;
+}
+.container {
+  width: 100%;
+  padding: 16px;
+  display: grid;
+  grid-gap: 10px;
+  article {
+    order: 2;
+  }
+  aside {
+    order: 1;
+  }
+
+  @media #{$break-md} {
+    grid-template-columns: 68% 30%;
+    grid-gap: 2%;
+
+    article {
+      order: 1;
+    }
+    aside {
+      order: 2;
+    }
+  }
+
+  .jobDetails {
+    @extend .box-style;
+    margin-bottom: 20px;
+    h4 {
+      color: $color-main;
+      margin-bottom: 20px;
+    }
+  }
+  .jobDetails_apply {
+    button {
+      width: 100%;
+      @media #{$break-md} {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+      }
+    }
+  }
+  .actions {
+    button {
+      width: 100%;
+      height: auto;
+      margin-bottom: 8px;
+    }
+  }
+  hr {
+    margin: 20px 0 16px 0;
+    border: 0.5px solid $color-lightGrey;
+  }
+  .overview {
+    @extend .box-style;
+    padding: 20px;
+    font-size: 16px;
+    @media #{$break-md} {
+      margin-top: 0;
+    }
+    div {
+      margin: 8px 0;
+    }
+    svg {
+      vertical-align: text-bottom;
+      color: $color-grey;
+    }
+    .overview__moreDetail {
+      div {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 60% 40%;
+      }
+    }
+  }
+}

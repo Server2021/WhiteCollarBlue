@@ -1,0 +1,85 @@
+@import "../../../../styles/style.scss";
+
+.hr__title {
+  @extend .flex-vertical-center;
+  text-align: center;
+  margin: 50px auto 10px auto;
+
+  img {
+    width: 170px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    max-width: 750px;
+  }
+
+  a {
+    margin: 5px 0;
+    button {
+      width: 340px;
+      border-radius: 0;
+    }
+  }
+}
+
+.hr__card-section {
+  @media #{$break-sm} {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .hr__image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
+    @media #{$break-sm} {
+      max-height: unset;
+      max-width: 500px;
+    }
+  }
+
+  .hr__card {
+    @extend .box-style--accent;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+
+    .hr__link {
+      color: $color-main;
+      font-weight: bold;
+      margin-top: 30px;
+
+      a,
+      svg {
+        color: $color-main;
+        vertical-align: sub;
+        font-size: 16px;
+      }
+
+      svg {
+        font-size: 20px;
+        margin-left: 5px;
+      }
+    }
+
+    @media #{$break-sm} {
+      width: 400px;
+      height: 230px;
+      text-align: left;
+
+      position: absolute;
+      top: 50%;
+      right: 0%;
+      transform: translate(-30%, -50%);
+      z-index: 1;
+    }
+  }
+}

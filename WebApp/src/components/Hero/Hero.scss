@@ -1,0 +1,58 @@
+@import "../../styles/style.scss";
+
+.hero__bg {
+    background-size: cover;
+    background-position: top;
+}
+
+.hero__container {
+    height: 200px;
+    @extend .flex-center;
+
+    &.hero__bg--left-align {
+        @media #{$break-md} {
+            justify-content: flex-start;
+        }
+    }
+
+    &.hero__bg--extra-menu {
+        height: 245px;
+        .hero__title {
+            margin-top: 95px;
+            @media #{$break-md} {
+                margin-top: 180px;
+            }
+        }
+        @media #{$break-md} {
+            height: 370px;
+        }
+    }
+
+    @media #{$break-md} {
+        height: 370px;
+    }
+}
+
+.hero__title {
+    margin-top: 50px;
+
+    @media #{$break-md} {
+        margin-top: 180px;
+    }
+}
+
+.clientlogin_iframe{
+    border:none;
+  }
+
+.clientregister_iframe{
+    border:none;
+  }
+
+.candidateregister_iframe{
+    border:none;
+  }
+
+.candidatelogin_iframe{
+    border:none;
+  }

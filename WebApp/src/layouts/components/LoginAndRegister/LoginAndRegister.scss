@@ -1,0 +1,28 @@
+@import "../../../styles/style.scss";
+
+
+.login-and-register {
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: $color-main-light;
+    background-size: cover;
+    @extend .flex-horizontal-center;
+    outline: none !important;
+    &:focus {
+        outline: none !important;
+    }
+    
+    span {
+      font-size: 16px;
+      color: $color-darkGrey;
+      text-transform: uppercase;
+      padding: 0 5px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  
+    span.login-and-register__divider {
+      color: $color-grey;
+      vertical-align: middle;
+    }
+}

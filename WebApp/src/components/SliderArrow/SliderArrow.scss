@@ -1,0 +1,20 @@
+.slider-arrow-icon {
+  color: blue;
+}
+.slick-prev {
+  left: -50px;
+}
+.slick-next {
+  right: -50px;
+}
+
+.slick-prev,
+.slick-next {
+  width: auto;
+  height: auto;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  display: none !important;
+}

@@ -1,0 +1,33 @@
+@import "../../../../styles/style.scss";
+
+
+.dialogStyle {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.dialogTitle {
+    padding: 40px 50px 0px 50px;
+    color: $color-main-dark;
+}
+
+.dialogTitleImage {
+    width: 80px;
+}
+
+.dialogContentText {
+    font-size: 18px !important;
+    color: $color-black !important;
+    padding-top: 0px !important;
+}
+
+.dialogActions {
+    padding: 20px 50px 0px 50px;
+    @extend .flex-vertical-center;
+    button:first-child {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,113 @@
+@import "../../../../../styles/style.scss";
+
+.react-slick {
+  padding-bottom: 20px !important;
+}
+
+.slick-slider {
+  .slick-track {
+    @media #{$break-md} {
+      height: unset;
+    }
+  }
+}
+
+// slider card
+.card-container {
+  margin-top: 30px;
+  @media #{$break-md} {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 30px 0px 50px 0;
+  }
+}
+
+.card-profile {
+  width: 270px;
+  height: 280px;
+  border-radius: 4px;
+  background-color: $color-main-dark;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+
+  z-index: 1;
+
+  position: relative;
+
+  @extend .flex-vertical-center;
+  @extend .BigShadow;
+
+  @media #{$break-md} {
+    width: 290px;
+    height: 370px;
+    position: relative;
+    top: 0;
+    right: -100px;
+    margin: 0;
+  }
+
+  img {
+    padding: 0;
+    border-radius: 50%;
+    width: 124px;
+    height: 124px;
+
+    @media #{$break-md} {
+      width: 170px;
+      height: 170px;
+    }
+  }
+
+  .card-name {
+    margin-top: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $color-accent;
+
+    @media #{$break-md} {
+      margin-top: 24px;
+      font-size: 20px;
+    }
+  }
+
+  .card-companyname {
+    padding-top: 12px;
+    text-transform: uppercase;
+  }
+}
+
+.card {
+  @extend .flex-vertical-center;
+  background-color: $color-main-light;
+  padding: 20px;
+  position: relative;
+  top: -145px;
+  padding-top: 180px;
+
+  .card-text {
+    text-align: center;
+    padding: 16px 6px;
+    font-size: 14px !important;
+    line-height: 18px !important;
+
+    @media #{$break-md} {
+      text-align: left;
+      padding-left: 0;
+      font-size: unset;
+      line-height: unset;
+    }
+  }
+
+  @media #{$break-md} {
+    position: relative;
+    top: 30px;
+    left: -100px;
+    width: 730px !important;
+    padding: 40px 40px 30px 240px;
+    border-radius: 4px;
+    align-items: flex-start;
+  }
+}

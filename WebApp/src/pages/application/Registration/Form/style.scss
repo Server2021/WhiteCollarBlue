@@ -1,0 +1,19 @@
+@import "../../../../styles/style.scss";
+
+.registration__form {
+  max-width: 800px;
+  margin: 0 auto;
+  .registration__tnc {
+    float: right;
+    margin-bottom: 10px;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.registration__form__submit {
+  @extend .flex-center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

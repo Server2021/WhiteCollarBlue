@@ -1,0 +1,43 @@
+@import "../../../../styles/style.scss";
+
+.jobboard__jobsearch {
+  .jobsearch__top {
+    padding: 20px;
+    @media #{$break-md} {
+      padding: 20px 20px 10px 20px;
+    }
+    @media #{$break-lg} {
+      padding: 30px 35px 10px 35px;
+    }
+  }
+  background: $color-main-dark;
+}
+
+.joblist {
+  margin-top: 10px;
+}
+
+.joblist__result {
+  display: flex;
+  justify-content: space-between;
+  span {
+    vertical-align: middle;
+    margin-bottom: 20px;
+  }
+}
+
+.joblist__result--none {
+  @extend .flex-vertical-center;
+  padding-top: 60px;
+  text-align: center;
+  img {
+    width: 80px;
+    height: auto;
+  }
+  h4 {
+    color: $color-main;
+  }
+  .jobsearch__clearFilters {
+    margin-top: 20px;
+  }
+}

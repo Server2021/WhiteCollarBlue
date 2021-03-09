@@ -1,0 +1,9 @@
+@import "../../styles/style.scss";
+
+.custom-button {
+    height: 100%;
+    white-space: nowrap;
+    &.MuiButton-sizeLarge {
+        padding: 12px 34px !important;
+    }
+}

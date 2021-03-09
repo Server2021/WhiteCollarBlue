@@ -1,0 +1,23 @@
+# Phite PHP Framework
+# William Bradley 2018-2019
+DirectoryIndex wcb.entrypoint.php
+php_value post_max_size 51M
+php_value upload_max_filesize 50M
+
+# Access only to Public folder
+Options +FollowSymLinks -Indexes
+RewriteEngine On
+
+# Rewrite from www to non-www
+RewriteCond %{HTTP_HOST} ^www.whitecollarblue.com.au [NC]
+RewriteRule ^(.*)$ https://whitecollarblue.com.au/$1 [L,R=301]
+
+RewriteBase /
+
+# Rewrite for PHP Services
+RewriteCond %{HTTP_USER_AGENT} !(facebookexternalhit/[0-9]|Twitterbot|Pinterest|LinkedInBot.*snippet)
+RewriteRule !^(robots.txt)($|/) wcb.entrypoint.php [L,QSA]
+
+RewriteCond %{HTTP_USER_AGENT} (facebookexternalhit/[0-9]|Twitterbot|Pinterest|LinkedInBot.*snippet)
+RewriteRule ^knowledgebase/(.*)$ https://whitecollarblue.com.au/metadata/knowledgebase/$1 [NC,L,R=301]
+RewriteRule !^(robots.txt)($|/) wcb.entrypoint.php [L,QSA]

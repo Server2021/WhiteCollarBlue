@@ -1,0 +1,46 @@
+@import "../../../../styles/style.scss";
+
+.partners {
+  margin: 20px 10px 0 10px;
+  @media #{$break-md} {
+    margin: 20px 40px 0 40px;
+  }
+
+  .partners__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+    border-bottom: 1px solid $color-lightGrey;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .partners__description {
+      margin-top: 30px;
+      text-align: center;
+      width: 100%;
+
+      h5 {
+        color: $color-main-dark;
+      }
+    }
+
+    @media #{$break-sm} {
+      flex-direction: row;
+
+      .partners__description {
+        margin-top: 0;
+        margin-left: 40px;
+        text-align: left;
+      }
+    }
+  }
+}

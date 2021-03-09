@@ -1,0 +1,44 @@
+@import "../../../styles/style.scss";
+
+$padding:20px;
+
+.jobcard {
+    @extend .box-style;
+    @extend .SmallShadow;
+    padding: $padding;
+    position: relative;
+    margin-bottom: $padding;
+    color: $color-black;
+    font-size: 16px;
+    svg {
+        vertical-align: text-bottom;
+    }
+    .jobcard__header {
+        width: 100%;
+        margin-bottom: $padding;
+        @media #{$break-md}{
+            margin-bottom: $padding*1.5;
+        }
+        h4 {
+            color: $color-main;
+        }
+        .jobcard__header__date {
+            position: absolute;
+            top: $padding;
+            right: $padding;
+            span { color: $color-black };
+        }
+    }
+    .jobcard__body {
+        margin-right: $padding*4;
+        @media #{$break-md}{
+            font-size: 16px;
+        }
+        .jobcard__overview {
+            margin-bottom: 16px; 
+            div { 
+                margin-bottom: 8px; 
+            }
+        }
+    }
+}

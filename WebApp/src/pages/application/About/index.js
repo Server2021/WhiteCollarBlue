@@ -32,7 +32,7 @@ const HRSenseProfiles = [
      image: require("../../../assets/about/michaelimg.jpg"),
      name: "Michael Robert",
      role: "HR Specialist & Contract Recruitment",
-     linkedin: "https://www.linkedin.com/in/tyler-nicholas-4a901a125/",
+     linkedin: "https://www.linkedin.com/in/michael-robert-449406183",
    },
    {
     image: require("../../../assets/about/Joey.jpg"),

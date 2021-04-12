@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import "./style.scss";
 import Submit from "../../../assets/icons/submit.svg";
+import Search from "../../../assets/icons/search.svg";
 import {FaChevronRight, FaSearch} from "react-icons/fa";
 import StyledTitle from "../../../components/StyledTitle/StyledTitle";
 import KBEntry from "../../../components/KBEntry/KBEntry";
@@ -67,9 +68,21 @@ export default class Home extends Component {
                 </Link>
               </div>
               <div className="home__search-bar__line" />
-              <div className="home__search-bar__filter">
-                <JobSearchBar location={this.props.location} />
+              <div className="home__search-bar__job">
+                <Link to="/jobseeker/findjob">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    component="span"
+                    className="custom-button home__search-bar__cv__button">
+                    <img src={Search} alt="Find Jobs" />
+                    Find Jobs
+                  </Button>
+                </Link>
               </div>
+              {/* <div className="home__search-bar__filter">
+                <JobSearchBar location={this.props.location} />
+              </div> */}
             </div>
           </div>
         </section>

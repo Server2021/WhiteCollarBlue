@@ -116,7 +116,24 @@
       border-bottom: none;
     }
     @media #{$break-lg} {
-      margin: 20px 0 0 20px;
+      margin: 40px 0 20px;
+    }
+    @media #{$break-xl} {
+      margin-right: 20px;
+    }
+  }
+
+  .home__search-bar__job {
+    padding: 20px;
+    border-bottom: 1px solid rgba(247, 249, 250, 0.5);
+
+    @media #{$break-md} {
+      padding: 0px;
+      margin-top: 20px;
+      border-bottom: none;
+    }
+    @media #{$break-lg} {
+      margin: 20px 20px 0px 0px;
     }
     @media #{$break-xl} {
       margin-right: 20px;
@@ -533,4 +550,8 @@ section.home__jobseekers-and-employers {
     margin: 0 auto;
     max-width: 1000px;
   }
+}
+
+.home__search-bar__job img {
+  width: 22px;
 }
